@@ -61,7 +61,7 @@ func main() {
 	flag.Parse()
 
 	fullPath := getCurrentFolder(*path)
-	basedir := strings.Split(fullPath, "src"+fs)[1]
+	basedir := filepath.Base(fullPath)
 	bdl := len(basedir) - 1
 
 	if *recursive {
